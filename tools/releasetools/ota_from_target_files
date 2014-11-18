@@ -547,7 +547,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   if OPTIONS.backuptool:
     if block_based:
-      common.ZipWriteStr(output_zip, "system/bin/backuptool.sh", ""+input_zip.read("SYSTEM/bin/backuptool.sh")
+      common.ZipWriteStr(output_zip, "system/bin/backuptool.sh", ""+input_zip.read("SYSTEM/bin/backuptool.sh"))
       common.ZipWriteStr(output_zip, "system/bin/backuptool.functions", ""+input_zip.read("SYSTEM/bin/backuptool.functions"))
     script.Mount("/system")
     script.RunBackup("backup")
